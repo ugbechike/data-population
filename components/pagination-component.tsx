@@ -37,17 +37,17 @@ export const PaginationComponent = (props: PaginationComponentPropsType) => {
       }}
     >
       {hasPrevPage ? (
-        <div className={"prev_btn"}>
-          <Link
-            passHref
-            href={{
-              pathname: router.pathname,
-              query: { page: prevPage },
-            }}
-          >
+        <Link
+          passHref
+          href={{
+            pathname: router.pathname,
+            query: { page: prevPage },
+          }}
+        >
+          <div className={"prev_btn"}>
             <p style={{ borderWidth: 1, borderColor: "red" }}>Prev</p>
-          </Link>
-        </div>
+          </div>
+        </Link>
       ) : (
         <div className={"prev_btn"}>
           <p>Prev</p>
@@ -56,38 +56,38 @@ export const PaginationComponent = (props: PaginationComponentPropsType) => {
       {pageNumbers.map((number: number, index: number) => {
         const isActive = page === number;
         return (
-          <div
-            className={"page_number"}
-            style={
-              isActive
-                ? { background: "#661aff", color: "white" }
-                : { background: "lightgray" }
-            }
-          >
-            <Link
-              passHref
-              href={{
-                pathname: router.pathname,
-                query: { page: number },
-              }}
-            >
-              <p>{number}</p>
-            </Link>
-          </div>
-        );
-      })}
-      {hasNextPage ? (
-        <div className={"next_btn"}>
           <Link
             passHref
             href={{
               pathname: router.pathname,
-              query: { page: nextPage },
+              query: { page: number },
             }}
           >
-            <p>Next</p>
+            <div
+              className={"page_number"}
+              style={
+                isActive
+                  ? { background: "#661aff", color: "white" }
+                  : { background: "lightgray" }
+              }
+            >
+              <p>{number}</p>
+            </div>
           </Link>
-        </div>
+        );
+      })}
+      {hasNextPage ? (
+        <Link
+          passHref
+          href={{
+            pathname: router.pathname,
+            query: { page: nextPage },
+          }}
+        >
+          <div className={"next_btn"}>
+            <p>Next</p>
+          </div>
+        </Link>
       ) : (
         <div className={"next_btn"}>
           <p>Next</p>
