@@ -4,10 +4,9 @@ export function BannerLogo() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="819"
-      height="540"
       fill="none"
       viewBox="0 0 922 540"
+      className={"banner-icon"}
     >
       <g>
         <path

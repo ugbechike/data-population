@@ -60,6 +60,7 @@ a {
   background-color: rgb(102, 26, 255);
   color: white;
 }
+
 /*Table style here ends*/
 
 /*Nav bar style starts*/
@@ -186,4 +187,46 @@ a {
 .span {
   color: #661aff;
   font-size: 17px;
+}
+
+.banner-icon {
+  width: 819px;
+  height: 540px
+}
+
+@media screen and (max-width: 410px) {
+  .banner__input-box-wrapper {
+    display: none;
+  }
+
+  .banner {
+    background-color: #f1e7ff;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    height: 65px;
+    padding-top: 0px;
+  }
+
+  .main_wrapper {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .table_summary {
+    width: 100%;
+  }
+
+  .banner_menu {
+    width: 40%;
+  }
+
+  .container {
+    width: 410px;
+  }
+
+  .navbar {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Logo } from "../../components/logo/logo";
 import { LanguageScreen } from "../../screen/language-screen";
 import Link from "next/link";
@@ -13,10 +12,10 @@ export default function Language() {
             <Logo />
             <div className={"banner_menu"}>
               <Link href="/">
-                <a>Country table</a>
+                <a>Country </a>
               </Link>
               <Link href="/language/language">
-                <a>Language table</a>
+                <a>Language </a>
               </Link>
             </div>
           </header>

@@ -1,23 +1,21 @@
-import Image from "next/image";
 import { HomeScreen } from "../screen/home-screen";
 import { Logo } from "../components/logo/logo";
 import Link from "next/link";
 import { BannerLogo } from "../components/logo/banner-logo";
-import { FaceBook } from "../components/icons/facebook";
 
 export default function Home() {
   return (
-    <div>
+    <div className={"container"}>
       <div className={"banner"}>
         <div className={"banner_content"}>
           <header className={"navbar"}>
             <Logo />
             <div className={"banner_menu"}>
               <Link href="/">
-                <a>Country table</a>
+                <a>Country</a>
               </Link>
               <Link href="/language/language">
-                <a>Language table</a>
+                <a>Language</a>
               </Link>
             </div>
           </header>
@@ -45,9 +43,6 @@ export default function Home() {
             <p>Telefon +47 923 34 015</p>
           </div>
         </div>
-        {/*<div className={"footer_socials"}>*/}
-        {/*  <FaceBook />*/}
-        {/*</div>*/}
       </footer>
     </div>
   );
