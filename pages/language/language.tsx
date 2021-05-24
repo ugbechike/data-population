@@ -9,7 +9,11 @@ export default function Language() {
       <div className={"banner"}>
         <div className={"banner_content"}>
           <header className={"navbar"}>
-            <Logo />
+            <Link href={"https://porterbuddy.com/"}>
+              <a target={"_blank"}>
+                <Logo />
+              </a>
+            </Link>
             <div className={"banner_menu"}>
               <Link href="/">
                 <a>Country </a>
