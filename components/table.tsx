@@ -4,6 +4,7 @@ import { toMillion } from "../utils/to-million";
 import { ColumnKey, Countries, Country } from "../utils/types";
 import { getLanguagesByCountry } from "../utils/country-utils";
 import { sortData, SortOrder } from "../utils/js-utils";
+import { toSquareMetricMiles } from "../utils/to-square-miles";
 
 type TableProps = {
   data: Countries | any;
@@ -29,8 +30,9 @@ const countryColumns: Columns = [
   },
   {
     key: "area",
-    label: "Area",
+    label: "Area (in mi²)",
     numeric: true,
+    format: toSquareMetricMiles,
   },
   {
     key: "population",
